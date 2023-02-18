@@ -1,0 +1,53 @@
+#%RAML 1.0
+title: Calculator-3
+version: v1
+protocols:
+  - HTTP
+  - HTTPS
+mediaType: 
+- application/json
+   
+traits:
+  que: !include /traits/trait.raml
+
+/addition:
+  get: 
+    is: [que]
+    responses:
+      200:
+        body:
+            example: !include /calculator/addition- example.json
+         
+            
+/subtraction:
+  post:
+    is: [que]
+    responses:
+      200:
+        body:
+            example: !include /calculator/subtraction- example.json
+                     
+/multiplication:
+  patch:
+    is: [que]
+    responses:
+          200:
+            body:
+                example: !include /calculator/1-multiplication- example.json
+                  
+/division:
+  delete:
+    is: [que]
+    responses:
+      200:
+        body:
+           example: !include /calculator/division- example.json
+              
+      
+              
+                          
+                                                                                              
+                    
+      
+                                            
+                                
